@@ -1,0 +1,11 @@
+<div class="aditional-btns">
+    <div class="aditional-btns__edit" (click)="onClickEdit()" *ngIf="!isEdit">
+        <img src="../../../assets/svg/pen-solid.svg">
+    </div>
+    <div class="aditional-btns__edit" (click)="onClickSave()" *ngIf="isEdit">
+        <img src="../../../assets/svg/save-solid.svg">
+    </div>
+    <div class="aditional-btns__delete" (click)="onClickDelete()">
+        <img src="../../../assets/svg/trash-alt-solid.svg">
+    </div>
+</div>

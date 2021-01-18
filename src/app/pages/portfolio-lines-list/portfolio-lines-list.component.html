@@ -1,0 +1,21 @@
+<div class="portfolio-lines">
+    <div class="return-btn" (click)="goHome()">
+        <img src="../../../assets/svg/arrow-circle-left-solid.svg">
+    </div>
+    <div class="title">{{ portfolio.name }}</div>
+    
+    <div class="portfolio-lines-list">
+        <div class="portfolio-lines-list__item" *ngFor="let line of portfolioLines">
+            <item-list
+                    (btnEditSelected)="onBtnEditSelected($event, line)"
+                    (btnDeleteSelected)="onBtnDeleteSelected(line)"
+                    [itemTitle]="''+line.amount"
+                    [itemDescription]='line.acronym'>
+            </item-list>
+        </div>
+    </div>
+
+    <div class="add-btn">
+        <add-btn  typeModal='portfolioLine' (addPortfolioLineClicked)="onBtnAddClicked($event)"></add-btn>
+    </div>
+</div>

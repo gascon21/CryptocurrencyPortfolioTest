@@ -1,0 +1,25 @@
+<div class="modal">
+    <div class="modal--cover" (click)="closeModal()">
+    </div>
+    <div class="modal--content">
+        <div class="modal--content__header">
+            Add currency
+        </div>
+        <div class="modal--content__body">
+            <label>Name currency:</label>
+            <input name="currencyName" [(ngModel)]="newCurrency.name" placeholder="Ex: Currency" >
+        </div>
+        <div class="modal--content__body">
+            <label>Acronym currency:</label>
+            <input name="currencyAcronym" [(ngModel)]="newCurrency.acronym" placeholder="Ex: 1 (id of currency)" >
+        </div>
+        <div class="modal--content__footer">
+            <div (click)="save()" class="footer-btn save-btn">
+                Save
+            </div>
+            <div (click)="closeModal()" class="footer-btn cancel-btn">
+                Cancel
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="modal">
+    <div class="modal--cover" (click)="closeModal()">
+    </div>
+    <div class="modal--content">
+        <div class="modal--content__header">
+            Add portfolio
+        </div>
+        <div class="modal--content__body">
+            <div class="modal-row">
+                <label>Name portfolio:</label>
+                <input name="portfolioName" [(ngModel)]="portfolioName" placeholder="Ex: Portfolio 1" >
+            </div>
+        </div>
+        <div class="modal--content__footer">
+            <div (click)="save()" class="footer-btn save-btn">
+                Save
+            </div>
+            <div (click)="closeModal()" class="footer-btn cancel-btn">
+                Cancel
+            </div>
+        </div>
+    </div>
+</div>

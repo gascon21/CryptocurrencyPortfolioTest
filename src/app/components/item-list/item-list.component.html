@@ -1,0 +1,14 @@
+<div class="item-list">
+    <div (click)="onClickTitle()" class="item-list__title">
+        <input type="text" name="title" [ngClass]="{'isEdit': isEdit}"
+                [(ngModel)]="itemTitle" [readonly]="!isEdit">
+    </div>
+    <div *ngIf="itemDescription != ''" class="item-list__description">
+        <input type="text" name="description" [ngClass]="{'isEdit': isEdit}"
+                [(ngModel)]="itemDescription" [readonly]="!isEdit">
+    </div>
+    <div class="aditional-btns">
+        <aditional-btns (btnSelected)="onBtnSelected($event)">
+        </aditional-btns>
+    </div>
+</div>

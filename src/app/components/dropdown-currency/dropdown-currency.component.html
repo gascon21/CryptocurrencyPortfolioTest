@@ -1,0 +1,24 @@
+<div class="dropdown-currency-btn" (click)="toggleDropdown()">
+    <img src="../../../assets/svg/money-check-alt-solid.svg">
+</div>
+<div class="dropdown-currency" *ngIf="showDropdown">
+    <div class="dropdown-currency-container">
+        <div class="dropdown-currency--item" *ngFor="let currency of currencies">
+            <div class="dropdown-currency--item__name">
+                <input type="text" name="currencyName" [ngClass]="{'isEdit': currency.isEdit}"
+                    [(ngModel)]="currency.name" [readonly]="!currency.isEdit">
+            </div>
+            <div class="dropdown-currency--item__acronym">
+                <input type="text" name="currencyAcronym" [ngClass]="{'isEdit': currency.isEdit}"
+                    [(ngModel)]="currency.acronym" [readonly]="!currency.isEdit">
+            </div>
+            <div class="dropdown-currency--item__additional-btn">
+                <aditional-btns (btnSelected)="onBtnSelected($event, currency)">
+                </aditional-btns>
+            </div>
+        </div>
+    </div>
+    <div class="add-btn">
+        <add-btn typeModal='currency' (addCurrencyClicked)="onBtnAddClicked($event)"></add-btn>
+    </div>
+</div>

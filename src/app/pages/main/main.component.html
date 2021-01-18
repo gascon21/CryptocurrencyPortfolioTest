@@ -1,0 +1,22 @@
+<div class="main">
+    <div class="title">PORTFOLIO</div>
+
+    <div class="dropdown-btn">
+        <dropdown-currency [currencies]="currencies"></dropdown-currency>
+    </div>
+    
+    <div class="portfolios-list">
+        <div class="portfolios-list__item" *ngFor="let portfolio of portfolios">
+            <item-list
+                    (btnEditSelected)="onBtnEditSelected($event, portfolio)"
+                    (btnDeleteSelected)="onBtnDeleteSelected(portfolio)"
+                    (clickTitle)="openDetail(portfolio)"
+                    [itemTitle]="portfolio.name">
+            </item-list>
+        </div>
+    </div>
+
+    <div class="add-btn">
+        <add-btn typeModal='portfolio' (addPortfolioClicked)="onBtnAddClicked($event)"></add-btn>
+    </div>
+</div>

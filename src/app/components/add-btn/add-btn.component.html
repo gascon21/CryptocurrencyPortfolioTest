@@ -1,0 +1,19 @@
+<div class="add-btn" (click)="onClickAdd()">
+    <img src="../../../assets/svg/plus-square-solid.svg">
+</div>
+
+<add-portfolio-modal
+        (onSaveModal)="savePortfolio($event)"
+        (onCloseModal)="closeModal()"
+        *ngIf="showPortfolioModal">
+</add-portfolio-modal>
+<add-portfolio-line-modal
+        (onSaveModal)="savePortfolioLine($event)"
+        (onCloseModal)="closeModal()"
+         *ngIf="showPortfolioLineModal">
+        </add-portfolio-line-modal>
+<add-currency-modal
+        (onSaveModal)="saveCurrency($event)"
+        (onCloseModal)="closeModal()"
+        *ngIf="showCurrencyModal">
+</add-currency-modal>

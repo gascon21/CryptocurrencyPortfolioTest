@@ -1,0 +1,51 @@
+.dropdown-currency-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+        width: 40px;
+        cursor: pointer;
+    }
+}
+
+.dropdown-currency {
+    
+    .dropdown-currency-container {
+        border: 1px solid #D8D8D8;
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    &--item {
+        height: 20px;
+        padding: 5px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:nth-child(odd) {
+            background-color: #D8D8D8;
+        }
+
+        input {
+            margin-right: 10px;
+            border-bottom: 1px solid #D8D8D8;
+        }
+
+        input:not(.isEdit) {
+            outline: none;
+            background-color: transparent;
+            border: 0;
+            margin-right: 0;
+            cursor: pointer;
+        }
+    }
+    .add-btn {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

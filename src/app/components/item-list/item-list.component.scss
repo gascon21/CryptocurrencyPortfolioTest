@@ -1,0 +1,22 @@
+.item-list {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F8F8F8;
+    height: 100%;
+    border-radius: 5px;
+
+    &__title {
+        font-weight: bold;
+    }
+    &__description {
+
+    }
+
+    input:not(.isEdit) {
+        outline: none;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+}
